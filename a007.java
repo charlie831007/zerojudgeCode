@@ -5,7 +5,7 @@ public class PrimeNumber {
 	private static int[] primeArray = new int[100000];
 	private static int pNum = 3 ;
 	
-	public static void buildPrime(int buildMax)                            //6的倍數為一圈
+	public static void buildPrime(int buildMax)                            			
 	{
 		for(int i = 7 , j = 4 ; i <= buildMax ; i += j , j = 6-j)
 		{
@@ -26,19 +26,22 @@ public class PrimeNumber {
 	}
 
 	public static void main(String[] args) {
-		primeArray[0] = 2 , primeArray[1] = 3 , primeArray[2] = 5 ;
-		
+		primeArray[0] = 2 ;
+		primeArray[1] = 3 ;
+		primeArray[2] = 5 ;
+				
 		Scanner keyboard = new Scanner(System.in) ;
-		PrimeNumber.buildPrime(46341) ;
+		buildPrime(46341) ;
 		
-		while(keyboard.hasNextInt())
+		while(keyboard.hasNext())
 		{
 			int keyin = keyboard.nextInt() ;
-			if(PrimeNumber.isPrime(keyin))
+			if(isPrime(keyin))
 				System.out.println("質數") ;
 			else
 				System.out.println("非質數") ;
 		}
+		keyboard.close();
 
 	}
 
