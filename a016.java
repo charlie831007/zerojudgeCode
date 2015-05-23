@@ -2,11 +2,11 @@ import java.util.Scanner ;
 
 public class Sudoku {
 
-	public static void judge(int[][] a)
+	public static String judge(int[][] a)
 	{
 		int[] num =new int[10] ;
-		for(int i : num)
-			i = 0 ;
+		for(int i = 1 ; i < 10 ; i++)
+			num[i] = 0 ;
 		
 		for(int row = 0 ; row < 9 ; row++)
 		{
@@ -15,12 +15,11 @@ public class Sudoku {
 				num[a[row][col]] +=1 ;
 				if(num[a[row][col]] > 1)
 				{
-					System.out.println("no") ;
-					return ;
+					return("no") ;
 				}
 			}
-			for(int i : num)
-					i = 0 ;
+			for(int i = 1 ; i < 10 ; i++)
+				num[i] = 0 ;
 		}
 		
 		for(int col = 0 ; col < 9 ; col++)
@@ -30,12 +29,11 @@ public class Sudoku {
 				num[a[row][col]] += 1 ;
 				if(num[a[row][col]] > 1)
 				{
-					System.out.println("no") ;
-					return ;
+					return("no") ;
 				}
 			}
-			for(int i : num)
-					i = 0 ;
+			for(int i = 1 ; i < 10 ; i++)
+				num[i] = 0 ;
 		}
 		
 		for(int row = 0 ; row < 3 ; row++)
@@ -45,13 +43,12 @@ public class Sudoku {
 				num[a[row][col]] += 1 ;
 				if(num[a[row][col]] > 1)
 				{
-					System.out.println("no") ;
-					return ;
+					return("no") ;
 				}
 			}
-			for(int i : num)
-					i = 0 ;
 		}
+		for(int i = 1 ; i < 10 ; i++)
+			num[i] = 0 ;
 		for(int row = 0 ; row < 3 ; row++)
 		{
 			for(int col = 3 ; col < 6 ; col++)
@@ -59,13 +56,12 @@ public class Sudoku {
 				num[a[row][col]] += 1 ;
 				if(num[a[row][col]] > 1)
 				{
-					System.out.println("no") ;
-					return ;
+					return("no") ;
 				}
 			}
-			for(int i : num)
-					i = 0 ;
 		}
+		for(int i = 1 ; i < 10 ; i++)
+			num[i] = 0 ;
 		for(int row = 0 ; row < 3 ; row++)
 		{
 			for(int col = 6 ; col < 9 ; col++)
@@ -73,13 +69,12 @@ public class Sudoku {
 				num[a[row][col]] += 1 ;
 				if(num[a[row][col]] > 1)
 				{
-					System.out.println("no") ;
-					return ;
+					return("no") ;
 				}	
 			}
-			for(int i : num)
-					i = 0 ;
 		}
+		for(int i = 1 ; i < 10 ; i++)
+			num[i] = 0 ;
 		for(int row = 3 ; row < 6 ; row++)
 		{
 			for(int col = 0 ; col < 3 ; col++)
@@ -87,13 +82,12 @@ public class Sudoku {
 				num[a[row][col]] += 1 ;
 				if(num[a[row][col]] > 1)
 				{
-					System.out.println("no") ;
-					return ;
+					return("no") ;
 				}	
 			}
-			for(int i : num)
-					i = 0 ;
 		}
+		for(int i = 1 ; i < 10 ; i++)
+			num[i] = 0 ;
 		for(int row = 3 ; row < 6 ; row++)
 		{
 			for(int col = 3 ; col < 6 ; col++)
@@ -101,13 +95,12 @@ public class Sudoku {
 				num[a[row][col]] += 1 ;
 				if(num[a[row][col]] > 1)
 				{
-					System.out.println("no") ;
-					return ;
+					return("no") ;
 				}
 			}
-			for(int i : num)
-				i = 0 ;
 		}
+		for(int i = 1 ; i < 10 ; i++)
+			num[i] = 0 ;
 		for(int row = 3 ; row < 6 ; row++)
 		{
 			for(int col = 6 ; col < 9 ; col++)
@@ -115,13 +108,12 @@ public class Sudoku {
 				num[a[row][col]] += 1 ;
 				if(num[a[row][col]] > 1)
 				{
-					System.out.println("no") ;
-					return ;
+					return("no") ;
 				}
 			}
-			for(int i : num)
-				i = 0 ;
 		}
+		for(int i = 1 ; i < 10 ; i++)
+			num[i] = 0 ;
 		for(int row = 6 ; row < 9 ; row++)
 		{
 			for(int col = 0 ; col < 3 ; col++)
@@ -129,13 +121,12 @@ public class Sudoku {
 				num[a[row][col]] += 1 ;
 				if(num[a[row][col]] > 1)
 				{
-					System.out.println("no") ;
-					return ;
+					return("no") ;
 				}
 			}
-			for(int i : num)
-				i = 0 ;
 		}
+		for(int i = 1 ; i < 10 ; i++)
+			num[i] = 0 ;
 		for(int row = 6 ; row < 9 ; row++)
 		{
 			for(int col = 3 ; col < 6 ; col++)
@@ -143,13 +134,12 @@ public class Sudoku {
 				num[a[row][col]] += 1 ;
 				if(num[a[row][col]] > 1)
 				{
-					System.out.println("no") ;
-					return ;
+					return("no") ;
 				}
 			}
-			for(int i : num)
-				i = 0 ;
 		}
+		for(int i = 1 ; i < 10 ; i++)
+			num[i] = 0 ;
 		for(int row = 6 ; row < 9 ; row++)
 		{
 			for(int col = 6 ; col < 9 ; col++)
@@ -157,15 +147,12 @@ public class Sudoku {
 				num[a[row][col]] += 1 ;
 				if(num[a[row][col]] > 1)
 				{
-					System.out.println("no") ;
-					return ;
+					return("no") ;
 				}
 			}
-			for(int i : num)
-				i = 0 ;
 		}
 		
-		System.out.println("yes") ;
+		return("yes") ;
 	}
 	
 	
@@ -183,7 +170,7 @@ public class Sudoku {
 				}
 			}
 			
-			judge(sudoku) ;
+			System.out.println(judge(sudoku)) ;
 		}
 		keyboard.close() ;
 	}
